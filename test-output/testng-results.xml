@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="7666" started-at="2017-08-06T19:51:06Z" finished-at="2017-08-06T19:51:14Z">
+  <suite name="Main Test Suite" duration-ms="12640" started-at="2017-08-06T20:09:38Z" finished-at="2017-08-06T20:09:51Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="7666" started-at="2017-08-06T19:51:06Z" finished-at="2017-08-06T19:51:14Z">
+    <test name="TestNG Test Group" duration-ms="12640" started-at="2017-08-06T20:09:38Z" finished-at="2017-08-06T20:09:51Z">
       <class name="testscripts.testcase.TC_01">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:testscripts.testcase.TC_01@4f933fd1]" name="setUp" is-config="true" duration-ms="4075" started-at="2017-08-07T01:21:02Z" finished-at="2017-08-07T01:21:06Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:testscripts.testcase.TC_01@675d3402]" name="setUp" is-config="true" duration-ms="4353" started-at="2017-08-07T01:39:30Z" finished-at="2017-08-07T01:39:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="executeTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testscripts.testcase.TC_01@4f933fd1]" name="executeTest" duration-ms="6893" started-at="2017-08-07T01:21:07Z" data-provider="test" finished-at="2017-08-07T01:21:14Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:testscripts.testcase.TC_02@51565ec2]" name="setUp" is-config="true" duration-ms="4297" started-at="2017-08-07T01:39:34Z" finished-at="2017-08-07T01:39:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="executeTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testscripts.testcase.TC_01@675d3402]" name="executeTest" duration-ms="5950" started-at="2017-08-07T01:39:39Z" data-provider="test" finished-at="2017-08-07T01:39:45Z">
           <params>
             <param index="0">
               <value>
@@ -37,11 +41,43 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- executeTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:testscripts.testcase.TC_01@4f933fd1]" name="tearDown" is-config="true" duration-ms="20" started-at="2017-08-07T01:21:14Z" finished-at="2017-08-07T01:21:14Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:testscripts.testcase.TC_01@675d3402]" name="tearDown" is-config="true" duration-ms="19" started-at="2017-08-07T01:39:51Z" finished-at="2017-08-07T01:39:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:testscripts.testcase.TC_02@51565ec2]" name="tearDown" is-config="true" duration-ms="9" started-at="2017-08-07T01:39:51Z" finished-at="2017-08-07T01:39:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- testscripts.testcase.TC_01 -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="testscripts.testcase.TC_02">
+        <test-method status="PASS" signature="executeTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testscripts.testcase.TC_02@51565ec2]" name="executeTest" duration-ms="5957" started-at="2017-08-07T01:39:45Z" data-provider="test" finished-at="2017-08-07T01:39:51Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[E255SK]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Enterprise1!]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[https://www.google.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- executeTest -->
+      </class> <!-- testscripts.testcase.TC_02 -->
+    </test> <!-- TestNG Test Group -->
+  </suite> <!-- Main Test Suite -->
 </testng-results>
