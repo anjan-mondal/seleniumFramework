@@ -21,8 +21,6 @@ import utility.ExcelUtils1;
 public class TC_02 extends TestCase {
 
 	Reuseable reuseable;
-	// ExtentReports report;
-	// ExtentTest logger;
 	String caseName;
 	Report report;
 
@@ -44,32 +42,23 @@ public class TC_02 extends TestCase {
 		driver.manage().window().maximize();
 		reuseable.LaunchApplication(url);
 		report.updateReport("URl launched" + url, "PASS");
-		// logger.log(LogStatus.PASS, "URl launched" + url + "<a href ='#'/>
-		// click");
 		FBLogin login = new FBLogin(driver);
 
 		// .login(Username, password);
 
 		FBProfile profile = new FBProfile(driver);
 		// report.updateReport("Profile not loaded","FAIL");
-		// logger.log(LogStatus.FAIL, "Profile not loaded");
-
-		// profile.logout();
 		Wrap();
 	}
 
 	@AfterSuite
 	public void tearDown() {
 		report.wrapReport();
-
 	}
 
 	@DataProvider(name = "test")
-
 	public Object[][] Authentication() throws Exception {
-
 		Object[][] testObjArray = ExcelUtils1.getData(ExcelUtils1.getTestCaseName(this.toString()), "Sheet1");
-
 		return (testObjArray);
 
 	}

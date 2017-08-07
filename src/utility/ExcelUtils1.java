@@ -1,5 +1,6 @@
 package utility;
 
+import java.io.File;
 import java.io.FileInputStream;
 
 import java.io.FileNotFoundException;
@@ -142,7 +143,7 @@ public class ExcelUtils1 {
 		}
 		
 		dataFilePath= System.getProperty("user.dir");
-		dataFilePath =dataFilePath+"/src/testscripts/datatables/"+value+".xlsx";
+		dataFilePath =dataFilePath+File.separator+"src"+File.separator+"testscripts"+File.separator+"datatables"+File.separator+value+".xlsx";
 		return  dataFilePath;
 
 	}
