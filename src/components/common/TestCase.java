@@ -1,9 +1,13 @@
 package components.common;
 
 
+import java.io.File;
+
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.asserts.SoftAssert;
 
 public class TestCase {
@@ -25,9 +29,16 @@ public class TestCase {
 		if (browser.equalsIgnoreCase("firefox")){
 			driver = new FirefoxDriver();
 		}else if(browser.equalsIgnoreCase("chrome")){
-			driverFilePath =driverFilePath+"/src/webdrivers/chromedriver.exe";
+			driverFilePath =driverFilePath+File.separator+"src"+File.separator+"webdrivers"+File.separator+"chromedriver.exe";
 			System.setProperty("webdriver.chrome.driver", driverFilePath);
 			driver = new ChromeDriver();
+		}else if(browser.equalsIgnoreCase("pi")){
+			DesiredCapabilities capabilities = DesiredCapabilities.firefox();
+		    System.setProperty("webdriver.gecko.driver", File.separator+"usr"+File.separator+"local"+File.separator+"bin"+File.separator+"geckodriver");
+		    capabilities.setCapability("marionette", false);
+		    capabilities.setPlatform(Platform.LINUX);
+		    capabilities.setBrowserName("firefox");
+		    driver = new FirefoxDriver(capabilities);
 		}else{
 			System.out.println("Browerd not defined");
 		}
