@@ -9,6 +9,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import org.apache.poi.util.SystemOutLogger;
+
 import bsh.This;
 
 public class Reporter {
@@ -55,6 +57,7 @@ public class Reporter {
 	{
 		currentDate = new SimpleDateFormat("dd-MM-yyyy-HH-mm-ss").format(new Date());
 		 File file = new File(projectFolder()+File.separator+"result"+File.separator+currentDate+File.separator);
+		 System.out.println(projectFolder()+File.separator+"result"+File.separator+currentDate+File.separator);
 	        if (!file.exists()) {
 	            if (file.mkdir()) {
 	                System.out.println("Directory is created!");
