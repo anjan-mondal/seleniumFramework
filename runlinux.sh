@@ -1,0 +1,1 @@
+Display=:1 xvfb-run java -cp /home/rahul/SeleniumPi/workspace/test/seleniumFramework/src/jars/*:/home/rahul/SeleniumPi/workspace/test/seleniumFramework/bin org.testng.TestNG ./testng.xml

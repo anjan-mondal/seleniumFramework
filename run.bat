@@ -1,0 +1,1 @@
+java -cp C:\Users\anjan\Desktop\newfile\seleniumFramework\src\jars\*;C:\Users\anjan\Desktop\newfile\seleniumFramework\bin org.testng.TestNG testng.xml

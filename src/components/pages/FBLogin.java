@@ -17,9 +17,10 @@ public class FBLogin {
     Reuseable reuseable;
     Report report;
     
-    public FBLogin(WebDriver driver ){
+    public FBLogin(WebDriver driver,Report report ){
      this.driver=driver;
-     reuseable = new Reuseable(driver);
+     this.report =report;
+     reuseable = new Reuseable(driver,report);
      
      
     }

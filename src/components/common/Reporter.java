@@ -45,24 +45,7 @@ public class Reporter {
 		}
 	}
 	
-	public static void writeResults() {
-		try {
-			String reportIn = new String(Files.readAllBytes(Paths.get(templatePath)));
-			String startHtml ="<html><head></head><body><table border ='2'>";
-			String endHtml ="</table></body></html>";
-			for (int i = 0; i < details.size();i++) {
-				reportIn = startHtml +reportIn+"" +"<tr><td>" + Integer.toString(i+1) + "</td><td><a href ='"+details.get(i).getResultLink() +"'>" + details.get(i).getResult() + "</a></td><td>" + details.get(i).getResultText() + "</td></tr>" ;
-			}
-			reportIn =reportIn+endHtml;
-			
-			currentDate = new SimpleDateFormat("dd-MM-yyyy-HH-mm-ss").format(new Date());
-			String reportPath = createResultFolder() + currentDate + ".html";
-			Files.write(Paths.get(reportPath),reportIn.getBytes(),StandardOpenOption.CREATE);
-			
-		} catch (Exception e) {
-			System.out.println("Error when writing report file:\n" + e.toString());
-		}
-	}
+	
 	public static String projectFolder(){
 		String projectPath= System.getProperty("user.dir");
 		return projectPath;
@@ -83,6 +66,19 @@ public class Reporter {
 	}
 	
 	public static String createResultFolderImage(String reportPath)
+	{
+		currentDate = new SimpleDateFormat("dd-MM-yyyy-HH-mm-ss").format(new Date());
+		 File file = new File(reportPath+"image"+File.separator);
+	        if (!file.exists()) {
+	            if (file.mkdir()) {
+	                System.out.println("Directory is created!");
+	            } else {
+	                System.out.println("Failed to create directory!");
+	            }
+	        }
+			return reportPath+"image"+File.separator;	    
+	}
+	public static String createResultFolderSuite(String reportPath)
 	{
 		currentDate = new SimpleDateFormat("dd-MM-yyyy-HH-mm-ss").format(new Date());
 		 File file = new File(reportPath+"image"+File.separator);

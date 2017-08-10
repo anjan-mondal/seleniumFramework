@@ -16,14 +16,16 @@ import org.testng.asserts.SoftAssert;
 
 public class Reuseable {
 	WebDriver driver;
+	Report report;
 	
-	
-	public Reuseable(WebDriver driver){
+	public Reuseable(WebDriver driver,Report report){
 		this.driver =driver;
+		this.report =report;
 	}
 	
 	public void  LaunchApplication(String url){
 		driver.get(url);
+		report.updateReport("URl launched" + url, "PASS");
 	}
 	
 	public boolean isElementFound(By by){

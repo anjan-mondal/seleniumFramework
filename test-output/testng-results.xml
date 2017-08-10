@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Main Test Suite" duration-ms="12640" started-at="2017-08-06T20:09:38Z" finished-at="2017-08-06T20:09:51Z">
+  <suite name="Parallel test suite" duration-ms="18335" started-at="2017-08-07T18:46:23Z" finished-at="2017-08-07T18:46:41Z">
     <groups>
     </groups>
-    <test name="TestNG Test Group" duration-ms="12640" started-at="2017-08-06T20:09:38Z" finished-at="2017-08-06T20:09:51Z">
+    <test name="TestNG Test Group" duration-ms="18335" started-at="2017-08-07T18:46:23Z" finished-at="2017-08-07T18:46:41Z">
       <class name="testscripts.testcase.TC_01">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:testscripts.testcase.TC_01@675d3402]" name="setUp" is-config="true" duration-ms="4353" started-at="2017-08-07T01:39:30Z" finished-at="2017-08-07T01:39:34Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:testscripts.testcase.TC_01@12bc6874]" name="setUp" is-config="true" duration-ms="3358" started-at="2017-08-08T00:16:23Z" finished-at="2017-08-08T00:16:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:testscripts.testcase.TC_02@51565ec2]" name="setUp" is-config="true" duration-ms="4297" started-at="2017-08-07T01:39:34Z" finished-at="2017-08-07T01:39:38Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:testscripts.testcase.TC_02@50675690]" name="setUp" is-config="true" duration-ms="2926" started-at="2017-08-08T00:16:26Z" finished-at="2017-08-08T00:16:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="executeTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testscripts.testcase.TC_01@675d3402]" name="executeTest" duration-ms="5950" started-at="2017-08-07T01:39:39Z" data-provider="test" finished-at="2017-08-07T01:39:45Z">
+        <test-method status="PASS" signature="executeTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testscripts.testcase.TC_01@12bc6874]" name="executeTest" duration-ms="5823" started-at="2017-08-08T00:16:30Z" data-provider="test" finished-at="2017-08-08T00:16:36Z">
           <params>
             <param index="0">
               <value>
@@ -41,17 +41,17 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- executeTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:testscripts.testcase.TC_01@675d3402]" name="tearDown" is-config="true" duration-ms="19" started-at="2017-08-07T01:39:51Z" finished-at="2017-08-07T01:39:51Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:testscripts.testcase.TC_01@12bc6874]" name="tearDown" is-config="true" duration-ms="18" started-at="2017-08-08T00:16:41Z" finished-at="2017-08-08T00:16:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:testscripts.testcase.TC_02@51565ec2]" name="tearDown" is-config="true" duration-ms="9" started-at="2017-08-07T01:39:51Z" finished-at="2017-08-07T01:39:51Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:testscripts.testcase.TC_02@50675690]" name="tearDown" is-config="true" duration-ms="13" started-at="2017-08-08T00:16:41Z" finished-at="2017-08-08T00:16:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- testscripts.testcase.TC_01 -->
       <class name="testscripts.testcase.TC_02">
-        <test-method status="PASS" signature="executeTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testscripts.testcase.TC_02@51565ec2]" name="executeTest" duration-ms="5957" started-at="2017-08-07T01:39:45Z" data-provider="test" finished-at="2017-08-07T01:39:51Z">
+        <test-method status="PASS" signature="executeTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testscripts.testcase.TC_02@50675690]" name="executeTest" duration-ms="5505" started-at="2017-08-08T00:16:36Z" data-provider="test1" finished-at="2017-08-08T00:16:41Z">
           <params>
             <param index="0">
               <value>
@@ -79,5 +79,5 @@
         </test-method> <!-- executeTest -->
       </class> <!-- testscripts.testcase.TC_02 -->
     </test> <!-- TestNG Test Group -->
-  </suite> <!-- Main Test Suite -->
+  </suite> <!-- Parallel test suite -->
 </testng-results>

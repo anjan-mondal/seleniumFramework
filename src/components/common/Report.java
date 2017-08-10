@@ -21,13 +21,10 @@ public class Report  {
     ExtentReports report;
 	ExtentTest logger;
 	private  String reportPath;
- 
+
     public Report(WebDriver driver){
         this.driver =driver;
         reportPath =Reporter.createResultFolder();       
-        
-
-
     }
     
     public void updateReport(String log1 ,String Status){
@@ -44,10 +41,7 @@ public class Report  {
         
         
     }
-    public void updateReport(String errorTest ,Exception error,String Status){
-        
-       
-    }
+   
     public void wrapReport(){
     	report.endTest(logger);
 		report.flush();
@@ -57,7 +51,7 @@ public class Report  {
     	
     	logger=report.startTest(testSummary);
     }
-    public void setTestSuiteName(String testCaseName){
+    public void setTestCaseName(String testCaseName){
     	
     	report = new ExtentReports(reportPath+testCaseName+".html",false);
     	report.config()
@@ -65,7 +59,7 @@ public class Report  {
         .reportHeadline(testCaseName)
         .reportName("Regression Suite - >");
     }
-    
+ 
     public String takeScreenShot(){
     	String currentDate = new SimpleDateFormat("dd-MM-yyyy-HH-mm-ss").format(new Date());
         File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);

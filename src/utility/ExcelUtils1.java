@@ -143,6 +143,7 @@ public class ExcelUtils1 {
 		}
 		
 		dataFilePath= System.getProperty("user.dir");
+		System.out.println(dataFilePath);
 		dataFilePath =dataFilePath+File.separator+"src"+File.separator+"testscripts"+File.separator+"datatables"+File.separator+value+".xlsx";
 		return  dataFilePath;
 
