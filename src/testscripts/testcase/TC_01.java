@@ -22,7 +22,7 @@ public class TC_01 extends TestCase {
 	
 	public void setUp(){
 		caseName= (getTestCaseName(this.toString()));
-		driver = getDriver("chrome"); 	
+		driver = getDriver("pi"); 	
 		report  = new Report(driver);
 		report.setTestCaseName(caseName);
 		report.setTestSummary("Open google page");		
