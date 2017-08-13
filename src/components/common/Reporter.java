@@ -59,8 +59,7 @@ public class Reporter {
 		 File file = new File(projectFolder()+File.separator+"result"+File.separator+currentDate+File.separator);
 		 System.out.println(projectFolder()+File.separator+"result"+File.separator+currentDate+File.separator);
 	        if (!file.exists()) {
-	        	System.out.println(file.mkdir());
-	            if (file.mkdir()==true) {
+	            if (file.mkdir()) {
 	            	
 	                System.out.println("Directory is created!");
 	            } else {

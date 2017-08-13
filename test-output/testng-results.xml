@@ -1,83 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Parallel test suite" duration-ms="18335" started-at="2017-08-07T18:46:23Z" finished-at="2017-08-07T18:46:41Z">
+  <suite name="Default suite" duration-ms="42739" started-at="2017-08-13T18:10:26Z" finished-at="2017-08-13T18:11:09Z">
     <groups>
     </groups>
-    <test name="TestNG Test Group" duration-ms="18335" started-at="2017-08-07T18:46:23Z" finished-at="2017-08-07T18:46:41Z">
-      <class name="testscripts.testcase.TC_01">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:testscripts.testcase.TC_01@12bc6874]" name="setUp" is-config="true" duration-ms="3358" started-at="2017-08-08T00:16:23Z" finished-at="2017-08-08T00:16:26Z">
+    <test name="Default test" duration-ms="42739" started-at="2017-08-13T18:10:26Z" finished-at="2017-08-13T18:11:09Z">
+      <class name="testscripts.testcase.TC_03">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:testscripts.testcase.TC_03@51565ec2]" name="setUp" is-config="true" duration-ms="2907" started-at="2017-08-13T23:40:26Z" finished-at="2017-08-13T23:40:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:testscripts.testcase.TC_02@50675690]" name="setUp" is-config="true" duration-ms="2926" started-at="2017-08-08T00:16:26Z" finished-at="2017-08-08T00:16:29Z">
+        <test-method status="PASS" signature="runSanity()[pri:0, instance:testscripts.testcase.TC_03@51565ec2]" name="runSanity" duration-ms="33568" started-at="2017-08-13T23:40:29Z" finished-at="2017-08-13T23:41:03Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="executeTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testscripts.testcase.TC_01@12bc6874]" name="executeTest" duration-ms="5823" started-at="2017-08-08T00:16:30Z" data-provider="test" finished-at="2017-08-08T00:16:36Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[E255SK]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Enterprise1!]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[https://www.google.com]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- executeTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:testscripts.testcase.TC_01@12bc6874]" name="tearDown" is-config="true" duration-ms="18" started-at="2017-08-08T00:16:41Z" finished-at="2017-08-08T00:16:41Z">
+        </test-method> <!-- runSanity -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:testscripts.testcase.TC_03@51565ec2]" name="tearDown" is-config="true" duration-ms="6242" started-at="2017-08-13T23:41:03Z" finished-at="2017-08-13T23:41:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:testscripts.testcase.TC_02@50675690]" name="tearDown" is-config="true" duration-ms="13" started-at="2017-08-08T00:16:41Z" finished-at="2017-08-08T00:16:41Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- testscripts.testcase.TC_01 -->
-      <class name="testscripts.testcase.TC_02">
-        <test-method status="PASS" signature="executeTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testscripts.testcase.TC_02@50675690]" name="executeTest" duration-ms="5505" started-at="2017-08-08T00:16:36Z" data-provider="test1" finished-at="2017-08-08T00:16:41Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[E255SK]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Enterprise1!]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[https://www.google.com]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- executeTest -->
-      </class> <!-- testscripts.testcase.TC_02 -->
-    </test> <!-- TestNG Test Group -->
-  </suite> <!-- Parallel test suite -->
+      </class> <!-- testscripts.testcase.TC_03 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

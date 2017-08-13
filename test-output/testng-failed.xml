@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [Parallel test suite]" parallel="classes">
-  <test name="TestNG Test Group(failed)" parallel="classes">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
     <classes>
-      <class name="testscripts.testcase.TC_01">
+      <class name="testscripts.testcase.TC_03">
         <methods>
           <include name="tearDown"/>
           <include name="setUp"/>
-          <include name="executeTest"/>
+          <include name="runSanity"/>
         </methods>
-      </class> <!-- testscripts.testcase.TC_01 -->
+      </class> <!-- testscripts.testcase.TC_03 -->
     </classes>
-  </test> <!-- TestNG Test Group(failed) -->
-</suite> <!-- Failed suite [Parallel test suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

@@ -1,4 +1,5 @@
 package testscripts.testcase;
+import org.apache.commons.mail.EmailException;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -22,7 +23,7 @@ public class TC_01 extends TestCase {
 	
 	public void setUp(){
 		caseName= (getTestCaseName(this.toString()));
-		driver = getDriver("pi"); 	
+		driver = getDriver("chrome"); 	
 		report  = new Report(driver);
 		report.setTestCaseName(caseName);
 		report.setTestSummary("Open google page");		
@@ -43,6 +44,9 @@ public class TC_01 extends TestCase {
 	@AfterTest
 	public void tearDown(){
 		report.wrapReport();
+		
+		report.sendReportInMain();
+		
 		
 	}
 	

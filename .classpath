@@ -19,5 +19,9 @@
 	<classpathentry kind="lib" path="src/jars/poi-scratchpad-3.16.jar"/>
 	<classpathentry kind="lib" path="src/jars/xmlbeans-2.6.0.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="src/jars/commons-email-1.5-tests.jar"/>
+	<classpathentry kind="lib" path="src/jars/commons-email-1.5.jar"/>
+	<classpathentry kind="lib" path="src/jars/activation-2.1.3.jar"/>
+	<classpathentry kind="lib" path="src/jars/javax.mail.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
