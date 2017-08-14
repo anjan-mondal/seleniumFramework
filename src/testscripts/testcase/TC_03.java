@@ -26,16 +26,14 @@ public class TC_03 extends TestCase {
 
 	public void setUp() {
 		caseName = (getTestCaseName(this.toString()));
-		driver = getDriver("pi");
+		driver = getDriver("chrome");
 		report = new Report(driver);
 		report.setTestCaseName(caseName);
 		report.setTestSummary("Alamo Sanity Reservation flow");
 	}
 
-	@Test
-	//(dataProvider = "sanity")
-	public void runSanity(){
-	//(String Url,String location,String pickupdate,String dropOffDate,String car,String firstname,String lastname,String mailid) {
+	@Test(dataProvider = "sanity")
+	public void runSanity(String location,String pickupdate,String dropOffDate,String car,String firstname,String lastname,String mailid) {
 		reuseable=new Reuseable(driver,report);
 		Dimension dimobj = new Dimension(1280,720);
 		driver.manage().window().setSize(dimobj);
@@ -44,15 +42,15 @@ public class TC_03 extends TestCase {
 		AlamoCarsPage alamoCarsPage = new AlamoCarsPage(driver, report);
 		AlamoAddonPage alamoAddonPage = new AlamoAddonPage(driver, report);
 		AlamoReviewPage alamoReviewPage = new AlamoReviewPage(driver, report);
-		alamoHomePage.enterPickUpLocation("PDX");
-		alamoHomePage.enterpickUpDate("09/20/2017");
-		alamoHomePage.enterdropOffDate("09/25/2017");
+		alamoHomePage.enterPickUpLocation(location);
+		alamoHomePage.enterpickUpDate(pickupdate);
+		alamoHomePage.enterdropOffDate(dropOffDate);
 		alamoHomePage.clickBookNowButton();
-		alamoCarsPage.selectCar("Compact");
+		alamoCarsPage.selectCar(car);
 		alamoAddonPage.clickContinue();
-		alamoReviewPage.enterFirstName("FirstName");
-		alamoReviewPage.enterLastName("LastName");
-		alamoReviewPage.enterEmail("test@sanity.com");
+		alamoReviewPage.enterFirstName(firstname);
+		alamoReviewPage.enterLastName(lastname);
+		alamoReviewPage.enterEmail(mailid);
 		//Wrap();
 	}
 	
