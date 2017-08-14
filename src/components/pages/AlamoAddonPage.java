@@ -16,7 +16,7 @@ public class AlamoAddonPage {
 	    Report report;
 	
 
-	By ContinueButton = By.xpath(".//*[@data-id='addon_continue_btn']");
+	By ContinueButton = By.xpath(".//*[@data-id='addon_skip_link']");
 	
 	public AlamoAddonPage(WebDriver driver,Report report){
 		this.driver = driver;
