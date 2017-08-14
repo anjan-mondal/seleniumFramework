@@ -27,9 +27,14 @@ public class AlamoHomePage {
 	}
 
 	public void enterPickUpLocation(String location) {
+		try {
 		driver.findElement(pickUpLocation).click();
 		driver.findElement(pickUpLocation).sendKeys(location);
 		report.updateReport("pick Up Location is " + location, "PASS");
+		}
+		catch(Exception e){
+			report.updateReport("pick Up Location failed: " + e.getMessage(), "FAIL");
+		}
 	}
 	
 	public void enterpickUpDate(String pickUpDate) {
