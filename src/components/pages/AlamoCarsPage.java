@@ -26,7 +26,7 @@ public class AlamoCarsPage {
 		String carXPath = ".//*[text()='"+car+"']/../../../../..//*[@data-id='selectCar_payLater_button']";
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(carXPath)));
 		driver.findElement(By.xpath(carXPath)).click();
-		report.updateReport("Car selected "+ car , "PASS");
+		//report.updateReport("Car selected "+ car , "PASS");
 	}
 	
 }
