@@ -49,7 +49,7 @@ public class AlamoHomePage {
 	
 	public void clickBookNowButton() {
 		driver.findElement(BookNowButton).click();
-		report.updateReport("Book Now Button clicked ", "PASS");
+		//report.updateReport("Book Now Button clicked ", "PASS");
 	}
 
 	
