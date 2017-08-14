@@ -1,5 +1,6 @@
 package testscripts.testcase;
 
+import org.openqa.selenium.Dimension;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
@@ -25,7 +26,7 @@ public class TC_03 extends TestCase {
 
 	public void setUp() {
 		caseName = (getTestCaseName(this.toString()));
-		driver = getDriver("pi");
+		driver = getDriver("chrome");
 		report = new Report(driver);
 		report.setTestCaseName(caseName);
 		report.setTestSummary("Alamo Sanity Reservation flow");
@@ -36,7 +37,8 @@ public class TC_03 extends TestCase {
 	public void runSanity(){
 	//(String Url,String location,String pickupdate,String dropOffDate,String car,String firstname,String lastname,String mailid) {
 		reuseable=new Reuseable(driver,report);
-		driver.manage().window().maximize();
+		Dimension dimobj = new Dimension(1280,720);
+		driver.manage().window().setSize(dimobj);
 	    reuseable.LaunchApplication("https://www.alamo.com/en_US/car-rental/home.html");
 		AlamoHomePage alamoHomePage = new AlamoHomePage(driver, report);
 		AlamoCarsPage alamoCarsPage = new AlamoCarsPage(driver, report);
