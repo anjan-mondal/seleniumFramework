@@ -30,7 +30,7 @@ public class AlamoHomePage {
 		try {
 		driver.findElement(pickUpLocation).click();
 		driver.findElement(pickUpLocation).sendKeys(location);
-		report.updateReport("pick Up Location is " + location, "PASS");
+		//report.updateReport("pick Up Location is " + location, "PASS");
 		}
 		catch(Exception e){
 			report.updateReport("pick Up Location failed: " + e.getMessage(), "FAIL");
@@ -39,12 +39,12 @@ public class AlamoHomePage {
 	
 	public void enterpickUpDate(String pickUpDate) {
 		driver.findElement(pickUpDateTime).sendKeys(pickUpDate);
-		report.updateReport("pick Up Date Time is " + pickUpDate, "PASS");
+		//report.updateReport("pick Up Date Time is " + pickUpDate, "PASS");
 	}
 	
 	public void enterdropOffDate(String dropOffDate) {
 		driver.findElement(dropOffDateTime).sendKeys(dropOffDate);
-		report.updateReport("drop Off Date Time is " + dropOffDate, "PASS");
+		report.updateReport("Enter Reservation Details Complete", "PASS");
 	}
 	
 	public void clickBookNowButton() {

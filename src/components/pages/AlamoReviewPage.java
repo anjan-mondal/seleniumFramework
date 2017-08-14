@@ -28,17 +28,17 @@ public class AlamoReviewPage {
 		WebDriverWait wait = new WebDriverWait(driver,120);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(firstName));
 		driver.findElement(firstName).sendKeys(strFirstName);
-		report.updateReport("first Name entered "+ strFirstName , "PASS");
+		//report.updateReport("first Name entered "+ strFirstName , "PASS");
 	}
 	
 	public void enterLastName(String strLastName) {
 		driver.findElement(lastName).sendKeys(strLastName);
-		report.updateReport("last Name entered "+ strLastName , "PASS");
+		//report.updateReport("last Name entered "+ strLastName , "PASS");
 	}
 	
 	public void enterEmail(String stremail) {
 		driver.findElement(email).sendKeys(stremail);
-		report.updateReport("Email entered "+ stremail , "PASS");
+		report.updateReport("AlamoReviewPage operation complete " , "PASS");
 	}
 	
 }
