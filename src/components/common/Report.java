@@ -31,7 +31,8 @@ public class Report {
 	ExtentTest logger;
 	private String reportPath;
 	private String completeReportPath;
-
+	//private String reportPath1="/media/rahul/U/";
+	private String testCaseName;
 	public Report(WebDriver driver) {
 		this.driver = driver;
 		reportPath = Reporter.createResultFolder();
@@ -63,7 +64,9 @@ public class Report {
 	}
 
 	public void setTestCaseName(String testCaseName) {
+		this.testCaseName =testCaseName;
 		completeReportPath = reportPath + testCaseName + ".html";
+		//report = new ExtentReports(reportPath + testCaseName + ".html", false);
 		report = new ExtentReports(reportPath + testCaseName + ".html", false);
 		report.config().documentTitle("Automation Report").reportHeadline(testCaseName)
 				.reportName("Regression Suite - >");
@@ -94,9 +97,12 @@ public class Report {
 			email.setSSLOnConnect(true);
 			email.setAuthenticator(new DefaultAuthenticator("anjanmondal@gmail.com", "Dataone.in2432"));
 			email.addTo("anjanmondal@gmail.com", "Anjan Mondal");
-			email.setFrom("me@apache.org", "Me");
-			email.addBcc("yxrkt512@gmail.com");
-			email.setSubject("Test Result");
+			email.setFrom("anjanmondal@gmail.com", "Anjan Mondal");
+			//email.addCc("yxrkt512@gmail.com");
+			//email.addBcc("Venkatesh.Brahmavar@cognizant.com");
+			//email.addCc("Samrat.Dutta3@cognizant.com");
+			
+			email.setSubject("Test Result-"+testCaseName);
 
 			// embed the image and get the content id
 			/*File myFile = new File(completeReportPath);

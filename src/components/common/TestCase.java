@@ -32,7 +32,12 @@ public class TestCase {
 			driverFilePath =driverFilePath+File.separator+"src"+File.separator+"webdrivers"+File.separator+"chromedriver.exe";
 			System.setProperty("webdriver.chrome.driver", driverFilePath);
 			driver = new ChromeDriver();
-		}else if(browser.equalsIgnoreCase("pi")){
+		}else if(browser.equalsIgnoreCase("gecko")){
+			driverFilePath =driverFilePath+File.separator+"src"+File.separator+"webdrivers"+File.separator+"geckodriver.exe";
+			System.setProperty("webdriver.gecko.driver", driverFilePath);
+			driver = new FirefoxDriver();
+		}
+		else if(browser.equalsIgnoreCase("pi")){
 			DesiredCapabilities capabilities = DesiredCapabilities.firefox();
 		    System.setProperty("webdriver.gecko.driver", File.separator+"usr"+File.separator+"local"+File.separator+"bin"+File.separator+"geckodriver");
 		    capabilities.setCapability("marionette", false);

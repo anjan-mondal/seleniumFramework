@@ -29,7 +29,7 @@ public class ExcelUtils1 {
 	
 	private static String dataFilePath;
 
-	public static Object[][] getData(String FilePath, String SheetName) throws Exception {
+	public synchronized static Object[][] getData(String FilePath, String SheetName) throws Exception {
 
 		String[][] tabArray = null;
 
@@ -97,7 +97,7 @@ public class ExcelUtils1 {
 	// This method is to read the test data from the Excel cell, in this we are
 	// passing parameters as Row num and Col num
 
-	public static String getCellData(int RowNum, int ColNum) throws Exception {
+	public synchronized static String getCellData(int RowNum, int ColNum) throws Exception {
 		try {
 			Cell = ExcelWSheet.getRow(RowNum).getCell(ColNum);
 
@@ -120,7 +120,7 @@ public class ExcelUtils1 {
 
 	}
 
-	public static String getTestCaseName(String sTestCase) throws Exception {
+	public synchronized static String getTestCaseName(String sTestCase) throws Exception {
 
 		String value = sTestCase;
 
