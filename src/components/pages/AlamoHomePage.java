@@ -2,6 +2,8 @@ package components.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import components.common.Report;
 import components.common.Reuseable;
@@ -19,7 +21,8 @@ public class AlamoHomePage {
 	By dropOffDateTime = By.xpath(".//*[@name='dropOffDateTime.date']");
 	By BookNowButton = By.xpath(".//*[@data-id='start_bookNow_button']");
 
-
+	WebDriverWait wait;
+	
 
 	public AlamoHomePage(WebDriver driver,Report report){
 		this.driver = driver;
@@ -28,6 +31,8 @@ public class AlamoHomePage {
 
 	public void enterPickUpLocation(String location) {
 		try {
+			wait = new WebDriverWait(driver,120);
+			wait.until(ExpectedConditions.elementToBeClickable(pickUpLocation));
 		driver.findElement(pickUpLocation).click();
 		driver.findElement(pickUpLocation).sendKeys(location);
 		//report.updateReport("pick Up Location is " + location, "PASS");

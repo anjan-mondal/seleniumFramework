@@ -1,16 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-
-<!--  ********************************************************
-
-THIS FRAMEWORK IS  SUPPORTING PARALLEL EXECUTION missing
-
-//***********************************************************-->
-
-
-
 <suite name="Parallel test suite" parallel="classes" thread-count="2">
+
        <test name="TestNG Test Group">
           <packages>
             <package name="testscripts.testcase" />

@@ -1,7 +1,9 @@
 package testscripts.testcase;
 
 import org.openqa.selenium.Dimension;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -22,14 +24,13 @@ public class TC_03 extends TestCase {
 	String caseName;
 	Report report;
 
-	@BeforeTest
-
+	@BeforeClass
 	public void setUp() {
 		caseName = (getTestCaseName(this.toString()));
 		driver = getDriver("chrome");
 		report = new Report(driver);
 		report.setTestCaseName(caseName);
-		report.setTestSummary("Alamo Sanity Reservation flow");
+		report.setTestSummary("Alamo Sanity Reservation Flow. Batch #3");
 	}
 
 	@Test(dataProvider = "sanity")
@@ -54,7 +55,7 @@ public class TC_03 extends TestCase {
 		//Wrap();
 	}
 	
-	@AfterTest
+	@AfterClass
 	public void tearDown(){
 		Wrap();
 		report.wrapReport();
