@@ -1,59 +1,68 @@
 package testscripts.testcase;
-import org.apache.commons.mail.EmailException;
+
+import org.openqa.selenium.Dimension;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+import components.pages.AlamoAddonPage;
+import components.pages.AlamoCarsPage;
+import components.pages.AlamoHomePage;
+import components.pages.AlamoReviewPage;
+import utility.ExcelUtils1;
 import components.common.Report;
 import components.common.Reuseable;
 import components.common.TestCase;
-import components.pages.FBLogin;
-import components.pages.FBProfile;
-import org.testng.annotations.DataProvider;
-import utility.ExcelUtils1;
 
 public class TC_01 extends TestCase {
 
-	
 	Reuseable reuseable;
-	//ExtentReports report;
-	//ExtentTest logger;
-	String caseName ;
+	// ExtentReports report;
+	// ExtentTest logger;
+	String caseName;
 	Report report;
-	@BeforeTest
-	
-	public void setUp(){
-		caseName= (getTestCaseName(this.toString()));
-		driver = getDriver("chrome"); 	
-		report  = new Report(driver);
-		report.setTestCaseName(caseName);
-		report.setTestSummary("Open google page");		
-	}
-	
-	@Test(dataProvider = "test")
 
-	public void executeTest(String Username, String password, String url,String broswer) {		
+	@BeforeTest
+
+	public void setUp() {
+		caseName = (getTestCaseName(this.toString()));
+		driver = getDriver("pichrome");
+		report = new Report(driver);
+		report.setTestCaseName(caseName);
+		report.setTestSummary("Alamo Sanity Reservation Flow. Batch #1");
+	}
+
+	@Test(dataProvider = "sanity")
+	public void runSanity(String location,String pickupdate,String dropOffDate,String car,String firstname,String lastname,String mailid) {
 		reuseable=new Reuseable(driver,report);
-		driver.manage().window().maximize();
-	    reuseable.LaunchApplication(url);
-		FBLogin login = new FBLogin(driver,report);
-		//.login(Username, password);
-		FBProfile profile = new FBProfile(driver,report);
-	    Wrap();
+		Dimension dimobj = new Dimension(1280,720);
+		driver.manage().window().setSize(dimobj);
+	    reuseable.LaunchApplication("https://www.alamo.com/en_US/car-rental/home.html");
+		AlamoHomePage alamoHomePage = new AlamoHomePage(driver, report);
+		AlamoCarsPage alamoCarsPage = new AlamoCarsPage(driver, report);
+		AlamoAddonPage alamoAddonPage = new AlamoAddonPage(driver, report);
+		AlamoReviewPage alamoReviewPage = new AlamoReviewPage(driver, report);
+		alamoHomePage.enterPickUpLocation(location);
+		alamoHomePage.enterpickUpDate(pickupdate);
+		alamoHomePage.enterdropOffDate(dropOffDate);
+		alamoHomePage.clickBookNowButton();
+		alamoCarsPage.selectCar(car);
+		alamoAddonPage.clickContinue();
+		alamoReviewPage.enterFirstName(firstname);
+		alamoReviewPage.enterLastName(lastname);
+		alamoReviewPage.enterEmail(mailid);
+		//Wrap();
 	}
 	
 	@AfterTest
 	public void tearDown(){
+		Wrap();
 		report.wrapReport();
-		
-		report.sendReportInMain();
-		
-		
+		report.sendReportInMain();		
 	}
-	
-	//*********Data provider name should be different for every test case******
-	
-	
-	@DataProvider(name = "test")
+	// *********Data provider name should be different for every test case******
+
+	@DataProvider(name = "sanity")
 
 	public Object[][] Authentication() throws Exception {
 
