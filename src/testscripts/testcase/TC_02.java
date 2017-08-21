@@ -32,7 +32,7 @@ public class TC_02 extends TestCase {
 
 	public void setUp() {
 		caseName = (getTestCaseName(this.toString()));
-		driver = getDriver("chrome");
+		driver = getDriver("pichrome");
 
 		report = new Report(driver);
 		report.setTestCaseName(caseName);

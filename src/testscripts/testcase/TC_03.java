@@ -27,7 +27,7 @@ public class TC_03 extends TestCase {
 	@BeforeClass
 	public void setUp() {
 		caseName = (getTestCaseName(this.toString()));
-		driver = getDriver("chrome");
+		driver = getDriver("pichrome");
 		report = new Report(driver);
 		report.setTestCaseName(caseName);
 		report.setTestSummary("Alamo Sanity Reservation Flow. Batch #3");
