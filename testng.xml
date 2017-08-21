@@ -12,7 +12,7 @@ THIS FRAMEWORK IS  SUPPORTING PARALLEL EXECUTION missing
 
 //***********************************************************-->
 
-<suite name="Parallel test suite" parallel="classes" thread-count="1">
+<suite name="Parallel test suite" parallel="classes" thread-count="2">
        <test name="TestNG Test Group">
           <packages>
             <package name="testscripts.testcase" />
