@@ -1,1 +1,1 @@
-Display=:1 xvfb-run java -cp /media/rahul/U/SeleniumPi/workspace/test/src/jars/*:/media/rahul/U/SeleniumPi/workspace/test/bin org.testng.TestNG ./testng.xml
+Display=:1 xvfb-run java -Dwebdriver.chrome.driver="/usr/lib/chromium-browser/chromedriver" -cp /media/rahul/U/SeleniumPi/workspace/test/src/jars/*:/media/rahul/U/SeleniumPi/workspace/test/bin org.testng.TestNG ./testng.xml

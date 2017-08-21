@@ -1,25 +1,164 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="42739" started-at="2017-08-13T18:10:26Z" finished-at="2017-08-13T18:11:09Z">
+  <suite name="Parallel test suite" duration-ms="86311" started-at="2017-08-21T09:43:31Z" finished-at="2017-08-21T09:44:58Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="42739" started-at="2017-08-13T18:10:26Z" finished-at="2017-08-13T18:11:09Z">
-      <class name="testscripts.testcase.TC_03">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:testscripts.testcase.TC_03@51565ec2]" name="setUp" is-config="true" duration-ms="2907" started-at="2017-08-13T23:40:26Z" finished-at="2017-08-13T23:40:29Z">
+    <test name="TestNG Test Group" duration-ms="86311" started-at="2017-08-21T09:43:31Z" finished-at="2017-08-21T09:44:58Z">
+      <class name="testscripts.testcase.TC_01">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:testscripts.testcase.TC_01@4678c730]" name="setUp" is-config="true" duration-ms="3385" started-at="2017-08-21T15:13:31Z" finished-at="2017-08-21T15:13:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="runSanity()[pri:0, instance:testscripts.testcase.TC_03@51565ec2]" name="runSanity" duration-ms="33568" started-at="2017-08-13T23:40:29Z" finished-at="2017-08-13T23:41:03Z">
+        <test-method status="PASS" signature="runSanity(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testscripts.testcase.TC_01@4678c730]" name="runSanity" duration-ms="40909" started-at="2017-08-21T15:13:36Z" data-provider="sanity" finished-at="2017-08-21T15:14:16Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[PDX]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[09/10/2017]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[09/24/2017]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Compact]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[testfirst]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[testlast]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[test@g.com]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runSanity -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:testscripts.testcase.TC_03@51565ec2]" name="tearDown" is-config="true" duration-ms="6242" started-at="2017-08-13T23:41:03Z" finished-at="2017-08-13T23:41:09Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:testscripts.testcase.TC_01@4678c730]" name="tearDown" is-config="true" duration-ms="3959" started-at="2017-08-21T15:14:16Z" finished-at="2017-08-21T15:14:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testscripts.testcase.TC_01 -->
+      <class name="testscripts.testcase.TC_02">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:testscripts.testcase.TC_02@6767c1fc]" name="setUp" is-config="true" duration-ms="3380" started-at="2017-08-21T15:13:31Z" finished-at="2017-08-21T15:13:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="runSanity(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testscripts.testcase.TC_02@6767c1fc]" name="runSanity" duration-ms="41954" started-at="2017-08-21T15:13:36Z" data-provider="sanity" finished-at="2017-08-21T15:14:17Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[PDX]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[09/10/2017]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[09/24/2017]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Compact]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[testfirst]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[testlast]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[test@g.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runSanity -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:testscripts.testcase.TC_02@6767c1fc]" name="tearDown" is-config="true" duration-ms="2982" started-at="2017-08-21T15:14:17Z" finished-at="2017-08-21T15:14:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testscripts.testcase.TC_02 -->
+      <class name="testscripts.testcase.TC_03">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:testscripts.testcase.TC_03@29ee9faa]" name="setUp" is-config="true" duration-ms="3157" started-at="2017-08-21T15:14:20Z" finished-at="2017-08-21T15:14:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="runSanity(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testscripts.testcase.TC_03@29ee9faa]" name="runSanity" duration-ms="31551" started-at="2017-08-21T15:14:24Z" data-provider="sanity" finished-at="2017-08-21T15:14:55Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[PDX]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[09/10/2017]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[09/24/2017]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Compact]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[testfirst]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[testlast]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[test@g.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runSanity -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:testscripts.testcase.TC_03@29ee9faa]" name="tearDown" is-config="true" duration-ms="2553" started-at="2017-08-21T15:14:55Z" finished-at="2017-08-21T15:14:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- testscripts.testcase.TC_03 -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- TestNG Test Group -->
+  </suite> <!-- Parallel test suite -->
 </testng-results>

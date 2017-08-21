@@ -32,6 +32,12 @@ public class TestCase {
 			driverFilePath =driverFilePath+File.separator+"src"+File.separator+"webdrivers"+File.separator+"chromedriver.exe";
 			System.setProperty("webdriver.chrome.driver", driverFilePath);
 			driver = new ChromeDriver();
+		}
+		else if(browser.equalsIgnoreCase("pichrome")){
+			DesiredCapabilities capabilities = DesiredCapabilities.chrome();
+			capabilities.setPlatform(Platform.LINUX);
+		    capabilities.setBrowserName("chrome");
+			driver = new ChromeDriver();
 		}else if(browser.equalsIgnoreCase("gecko")){
 			driverFilePath =driverFilePath+File.separator+"src"+File.separator+"webdrivers"+File.separator+"geckodriver.exe";
 			System.setProperty("webdriver.gecko.driver", driverFilePath);
