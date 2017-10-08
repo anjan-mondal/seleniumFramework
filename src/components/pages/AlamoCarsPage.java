@@ -1,7 +1,9 @@
 package components.pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -25,6 +27,8 @@ public class AlamoCarsPage {
 		WebDriverWait wait = new WebDriverWait(driver,120);
 		String carXPath = ".//*[text()='"+car+"']/../../../../..//*[@data-id='selectCar_payLater_button']";
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(carXPath)));
+		WebElement carelement = driver.findElement(By.xpath(carXPath));
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", carelement);
 		driver.findElement(By.xpath(carXPath)).click();
 		report.updateReport("Car selected "+ car , "PASS");
 	}

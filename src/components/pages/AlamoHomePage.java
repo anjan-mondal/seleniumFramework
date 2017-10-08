@@ -2,8 +2,10 @@ package components.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.JavascriptExecutor;
 
 import components.common.Report;
 import components.common.Reuseable;
@@ -16,10 +18,10 @@ public class AlamoHomePage {
     Reuseable reuseable;
     Report report;
 
-	By pickUpLocation = By.xpath(".//*[@name='pickUpLocation.searchCriteria']");
-	By pickUpDateTime = By.xpath(".//*[@name='pickUpDateTime.date']");
-	By dropOffDateTime = By.xpath(".//*[@name='dropOffDateTime.date']");
-	By BookNowButton = By.xpath(".//*[@data-id='start_bookNow_button']");
+	By pickUpLocation = By.xpath("//input[@data-id='pickUpLocation.searchCriteria']");
+	By pickUpDateTime = By.xpath("//input[@data-id='pickUpDateTime.date']");
+	By dropOffDateTime = By.xpath("//input[@data-id='dropOffDateTime.date']");
+	By BookNowButton = By.xpath("//button[@data-id='start_bookNow_button']");
 
 	WebDriverWait wait;
 	
@@ -53,6 +55,8 @@ public class AlamoHomePage {
 	}
 	
 	public void clickBookNowButton() {
+		WebElement element = driver.findElement(BookNowButton);
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
 		driver.findElement(BookNowButton).click();
 		//report.updateReport("Book Now Button clicked ", "PASS");
 	}
