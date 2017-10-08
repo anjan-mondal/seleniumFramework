@@ -1,0 +1,1 @@
+xvfb-run -a java -Dwebdriver.chrome.driver="/usr/local/bin/chromedriver" -cp /home/yxrkt512/seleniumFramework/src/jars/*:/home/yxrkt512/seleniumFramework/bin org.testng.TestNG ./testng.xml
